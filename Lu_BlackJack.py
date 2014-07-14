@@ -10,14 +10,6 @@ in_play = False
 outcome = ""
 score = 0
 
-# load card sprite - 949x392 - source: jfitz.com
-# CARD_SIZE = (73, 98)
-# CARD_CENTER = (36.5, 49)
-# card_images = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/cards.jfitz.png")
-
-# CARD_BACK_SIZE = (71, 96)
-# CARD_BACK_CENTER = (35.5, 48)
-# card_back = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/card_back.png")    
 
 
 # define globals for cards
@@ -185,39 +177,3 @@ deal()
 
 def show():
     print "score:  " + str(score)  
-          
-# draw handler  
-'''  
-def draw(canvas):
-    
-    canvas.draw_text("Black Jack", (30, 70), 60, "Black")    
-    dealer_hands.draw(canvas,(60,210))
-    player_hands.draw(canvas,(60,530))  
-    if in_play:
-        canvas.draw_image(card_back, CARD_BACK_CENTER, CARD_BACK_SIZE,
-                          [60 + CARD_CENTER[0], 210 + CARD_CENTER[1]], CARD_BACK_SIZE )       
-    canvas.draw_text("score:  " + str(score), (600, 70), 40, "Black")
-    canvas.draw_text("DEALER", (60, 180), 30, "Red")
-    canvas.draw_text("PLAYER", (60, 500), 30, "Purple")
-    canvas.draw_text("***********************************************************************", (200, 360), 10, "White")
-    canvas.draw_text("***********************************************************************", (200, 430), 10, "White")
-    canvas.draw_text(outcome, (250, 400), 30, "White")
-    
-    
-# initialization frame
-frame = simplegui.create_frame("Blackjack", 800, 700)
-frame.set_canvas_background("Green")
-
-#create buttons and canvas callback
-frame.add_button("Deal", deal, 200)
-frame.add_button("Hit",  hit, 200)
-frame.add_button("Stand", stand, 200)
-frame.set_draw_handler(draw)
-
-
-# get things rolling
-frame.start()
-
-
-# remember to review the gradic rubric
-'''
